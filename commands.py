@@ -705,7 +705,7 @@ class BotCommands(commands.Cog):
 
         self.leaderboard_view_kd = LeaderboardView(ctx, self.bot, sorted_kd, players_per_page=10, timeout=None)
         
-        content = f"## K/D Leaderboard (Page {self.leaderboard_view.current_page+1}/{self.leaderboard_view.total_pages}) ##\n```\n{table_output}\n```"
+        content = f"## K/D Leaderboard (Page {self.leaderboard_view_kd.current_page+1}/{self.leaderboard_view_kd.total_pages}) ##\n```\n{table_output}\n```"
         self.leaderboard_message_kd = await ctx.send(content=content, view=self.leaderboard_view_kd) #########
 
         # Start the refresh
@@ -776,7 +776,7 @@ class BotCommands(commands.Cog):
 
         self.leaderboard_view_wins = LeaderboardView(ctx, self.bot, sorted_wins, players_per_page=10, timeout=None)
         
-        content = f"## Wins Leaderboard (Page {self.leaderboard_view.current_page+1}/{self.leaderboard_view.total_pages}) ##\n```\n{table_output}\n```"
+        content = f"## Wins Leaderboard (Page {self.leaderboard_view_wins.current_page+1}/{self.leaderboard_view_wins.total_pages}) ##\n```\n{table_output}\n```"
         self.leaderboard_message_wins = await ctx.send(content=content, view=self.leaderboard_view_wins) #########
 
         # Start the refresh
@@ -847,7 +847,7 @@ class BotCommands(commands.Cog):
 
         self.leaderboard_view_acs = LeaderboardView(ctx, self.bot, sorted_acs, players_per_page=10, timeout=None)
         
-        content = f"## K/D Leaderboard (Page {self.leaderboard_view.current_page+1}/{self.leaderboard_view.total_pages}) ##\n```\n{table_output}\n```"
+        content = f"## K/D Leaderboard (Page {self.leaderboard_view_acs.current_page+1}/{self.leaderboard_view_acs.total_pages}) ##\n```\n{table_output}\n```"
         self.leaderboard_message_acs = await ctx.send(content=content, view=self.leaderboard_view_acs) #########
 
         # Start the refresh
